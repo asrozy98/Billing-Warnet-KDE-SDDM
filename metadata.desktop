@@ -1,0 +1,17 @@
+[SddmGreeterTheme]
+Name=Dolphin Billing Warnet
+Description=Dolphin Billing Warnet SDDM theme
+Author=M Faisal A
+Copyright=(c) 2026, M Faisal A
+License=GPL 3+
+Type=sddm-theme
+Version=0.1
+Website=https://github.com/asrozy98/Billing-Warnet-KDE-SDDM
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=faisalasrozy@gmail.com
+Theme-Id=Sweet-Mars-Plasma6
+Theme-API=2.0
+QtVersion=6
