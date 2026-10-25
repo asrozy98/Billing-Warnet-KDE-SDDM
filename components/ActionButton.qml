@@ -43,10 +43,10 @@ Item {
         width: iconSize + Kirigami.Units.smallSpacing
         height: width
         radius: width / 2
-        color: root.activeFocus || containsMouse ? "#C8E6EF" : "#ffffff" // Matching cyan/white tones
-        border.color: "#5ABBD0" // Sharp cyan border
+        color: root.activeFocus || containsMouse ? "#5ABBD0" : "transparent" // Matching cyan/white tones
+        border.color: root.activeFocus || containsMouse ?"#5ABBD0" : "transparent"// Sharp cyan border
         border.width: 1
-        opacity: 0.9 // Highly solid background
+        opacity: 1 // Highly solid background
         Behavior on opacity {
             PropertyAnimation {
                 duration: Kirigami.Units.longDuration
@@ -62,7 +62,7 @@ Item {
         radius: width / 2
         scale: mouseArea.containsPress ? 1 : 0
         color: "#5ABBD0"
-        opacity: 0.3
+        opacity: 1
         Behavior on scale {
             PropertyAnimation {
                 duration: Kirigami.Units.shortDuration
@@ -79,8 +79,10 @@ Item {
         }
         width: iconSize
         height: iconSize
-        opacity: enabled ? 1.0 : 0.4 // High contrast icons
+        opacity: 1
         active: mouseArea.containsMouse || root.activeFocus
+        // Warna kontras tinggi (biru sangat pekat/hampir hitam) agar terlihat jelas di atas background cyan
+        color: active ? "#002030" : "#8396a0" 
     }
 
     PlasmaComponents3.Label {

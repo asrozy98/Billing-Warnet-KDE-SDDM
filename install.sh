@@ -23,8 +23,8 @@ echo "Copying theme files to $INSTALL_DIR..."
 mkdir -p "$INSTALL_DIR"
 cp -r "$SOURCE_DIR"/* "$INSTALL_DIR/"
 
-# Remove the installer itself from the installed directory to keep it clean
-rm -f "$INSTALL_DIR/install.sh"
+# Keep only runtime files in the installed directory
+rm -f "$INSTALL_DIR/install.sh" "$INSTALL_DIR/README.md" "$INSTALL_DIR/preview.png" "$INSTALL_DIR/AGENTS.md"
 
 # 2. Auto-detect PAM faillock settings
 UNLOCK_TIME=60

@@ -1,5 +1,4 @@
 [General]
-showClock=true
 type=image
 lockoutAttempts=3
 lockoutDuration=600
